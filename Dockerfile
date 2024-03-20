@@ -1,7 +1,7 @@
-# Use the official OpenJDK 17 image as the base image for building
+# Use the official Gradle image with OpenJDK 17 as the base image for building
 FROM gradle:jdk17 as builder
 
-# Set the working directory inside the container
+# Set the working directory inside the container for the build stage
 WORKDIR /app
 
 # Copy the project files
@@ -13,7 +13,7 @@ RUN gradle build
 # Use a lightweight base image for the runtime environment
 FROM openjdk:17-alpine
 
-# Set the working directory inside the container
+# Set the working directory inside the container for the runtime stage
 WORKDIR /app
 
 # Copy the compiled JAR file from the build stage to the container
