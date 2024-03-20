@@ -20,7 +20,7 @@ WORKDIR /app
 COPY --from=builder /app/build/libs/Vendor-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the port that your application runs on
-EXPOSE 8080
+EXPOSE 8082
 
 # Command to run the application when the container starts
 CMD ["java", "-jar", "app.jar"]
