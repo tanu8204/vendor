@@ -17,7 +17,7 @@ FROM openjdk:17-alpine
 WORKDIR /app
 
 # Copy the compiled JAR file from the build stage to the container
-COPY --from=builder /app/build/libs/Vendor-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=builder /app/build/libs/vendor-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the port that your application runs on
 EXPOSE 8082
