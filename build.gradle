@@ -49,5 +49,5 @@ tasks.named('test') {
 }
 
 springBoot {
-    mainClassName = 'com.SXN.Vendor.VendorApplication'
+    mainClassName = 'com.SXN.Vendor.VendorApplicationTests'
 }
